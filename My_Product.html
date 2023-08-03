@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NFT MARKETPLACE</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #000000;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .navbar button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .mint-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #000000;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    .btn-mint {
+      background-color: #000000;
+      color: #fff;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="navbar">
+    <button onclick="location.href='Mint.html'">MINT</button>
+    <button onclick="location.href='My_Product.html'">MY PRODUCT</button>
+    <button onclick="location.href='Transfer.html'">TRANSFER</button>
+  </div>
+  <div class="form-group">
+  <div class="mint-form">
+  <h2>Ownership Checking</h2>
+  <label for="ownerAddress">Recipient:</label>
+  <input type="text" id="ownerAddress" placeholder="Recipient Address"/>
+  <br>
+  <button class="btn btn-mint" onclick="getOwnedTokenIds()">Get Owned Token IDs</button>
+  </div>
+  </div>
+  <div id="output"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

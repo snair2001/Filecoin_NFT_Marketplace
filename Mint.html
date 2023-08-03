@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NFT MARKETPLACE</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #000000;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .navbar button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .mint-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #000000;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      margin-top: 100px;
+    }
+
+    .horizontal-line {
+      width: 100%;
+      height: 1px;
+      background-color: #000000;
+      margin-bottom: 20px;
+    }
+    
+    .btn-mint {
+      background-color: #000000;
+      color: #fff;
+    }
+
+  </style>
+  
+</head>
+<body>
+  <div class="navbar">
+    <button onclick="location.href='Mint.html'">MINT</button>
+    <button onclick="location.href='My_Product.html'">MY PRODUCT</button>
+    <button onclick="location.href='Transfer.html'">TRANSFER</button>
+  </div>
+  <div class="form-group">
+    <div class="mint-form">
+      <h2>Mint NFT</h2>
+      <label for="recipient-address">Recipient Address:</label>
+      <input type="text" id="recipient-address" placeholder="Recipient Address">
+      <br>
+      <label for="nft-token-id">Token ID:</label>
+      <input type="text" id="nft-token-id" placeholder="Token ID">
+      <br>
+      <label for="nft-name">NFT Name:</label>
+      <input type="text" id="nft-name" placeholder="NFT Name">
+      <br>
+      <label for="nft-price">NFT Price:</label>
+      <input type="text" id="nft-price" placeholder="NFT Price">
+      <br>
+      <form id="imageUploadForm">
+        <label for="imageFile">Image File:</label>
+        <input type="file" id="imageFile" name="imageFile" accept="image/*">
+        <div id="imageContainer"></div>
+      </form>
+      <br>
+      <button class="btn btn-mint" onclick="mintNFT()">Create NFT</button>
+    </div>
+  </div>
+  <div id="output"></div>
+  <div class="horizontal-line"></div>
+  <div id="nft-output"></div>
+  <hr>
+  <div class="form-group">
+    <div class="mint-form">
+      <h2>Owned NFT</h2>
+      <button class="btn btn-mint" id="display-link-btn">Owned NFT Details</button>
+      <br>
+    </div>
+  </div>
+  <div id="owned-nft-output"></div>
+  <div id="output"></div>
+  <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+  <script src="Mint.js"></script>
+</body>
+</html>
